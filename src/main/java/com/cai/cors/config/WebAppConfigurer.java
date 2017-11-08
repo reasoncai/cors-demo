@@ -17,6 +17,6 @@ public class WebAppConfigurer extends WebMvcConfigurerAdapter {
                 .allowedOrigins("*")         //可变参数，*表示所有,填协议+地址+端口
                 .allowedMethods("GET","POST") //
                 .allowedHeaders("*")
-                .allowCredentials(false).maxAge(3600);
+                .allowCredentials(true).maxAge(3600);//是否允许发送和接受cookie等信息
     }
 }
