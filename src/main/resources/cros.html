@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cros</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        //方法一,config
+        $.post("http://localhost:8080/api",{echo:"hello"},function (data) {
+            console.log('方法一,config'+data);
+        })
+    </script>
+
+
+    <script>
+        //方法二,注解
+        $.post("http://localhost:8080/anno",{echo:"hello2"},function (data) {
+            console.log('方法二,注解'+data);
+        })
+    </script>
+
+    <script>
+        //方法三，corsconfig
+        $.post("http://localhost:8080/corsconfig",{echo:"hello3"},function (data) {
+            console.log('方法三,corsconfig'+data);
+        })
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
